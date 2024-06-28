@@ -494,7 +494,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Press Start
+  m_Text: Press Skey
 --- !u!222 &641843365
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803517892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5f2f49702f4744b3018bca6a1bf95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coin: 0
+  coin: 1
   inse: {fileID: 372724364}
   oneP: {fileID: 814890023}
   twoP: {fileID: 0}

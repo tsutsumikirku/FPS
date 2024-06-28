@@ -35,6 +35,9 @@ public class Crosshair : MonoBehaviour
 
     void Update()
     {
+        PlayerPrefs.SetInt("Score", scoree);
+        PlayerPrefs.Save();
+
         Vector3 newPosition = transform.position;
 
         // マウスの移動検出
