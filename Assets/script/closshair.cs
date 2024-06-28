@@ -84,6 +84,7 @@ public class Crosshair : MonoBehaviour
 
         if (Input.GetButton("Fire1") && time > ti)
         {
+            Instantiate(aA);
             click = true;
             Instantiate(bom);
             Instantiate(bom2, transform.position, Quaternion.identity);
@@ -94,7 +95,7 @@ public class Crosshair : MonoBehaviour
             {
                 dualSense.SetMotorSpeeds(1f, 1f);
                 isVibrating = true;
-                Instantiate(aA);
+               
             }
           
         }
