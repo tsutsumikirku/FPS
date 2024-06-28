@@ -64,7 +64,7 @@ public class Credit : MonoBehaviour
         if(coin == 1)
         {
             // SÉLÅ[Ç™âüÇ≥ÇÍÇΩÇÁ
-            if (Input.GetKeyDown(switchKey))
+            if (Input.GetKeyDown(switchKey)||Input.GetButtonDown("Fire1"))
             {
                 Instantiate(start);
                 time = 0;

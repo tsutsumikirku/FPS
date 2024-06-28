@@ -21,7 +21,7 @@ public class restart : MonoBehaviour
     void Update()
     {
         // Sキーが押されたら
-        if (Input.GetKeyDown(switchKey))
+        if (Input.GetKeyDown(switchKey)||Input.GetButtonDown("Fire1"))
         {
             // シーンを切り替える
             SceneManager.LoadScene(sceneName);
