@@ -1,0 +1,17 @@
+{
+    "name": "shoot",
+    "maps": [],
+    "controlSchemes": [
+        {
+            "name": "ps5",
+            "bindingGroup": "ps5",
+            "devices": [
+                {
+                    "devicePath": "<DualSenseGamepadHID>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
