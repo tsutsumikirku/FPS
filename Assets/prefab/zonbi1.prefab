@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3caab493b79181749b9605e1b70ffcfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSpeed: 0.1
+  initialScaleSpeed: 0.1
   maxScale: {x: 1, y: 1, z: 1}
 --- !u!60 &7023437556791239507
 PolygonCollider2D:
@@ -130,7 +130,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

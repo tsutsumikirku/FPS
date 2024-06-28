@@ -11,8 +11,11 @@ public class Crosshair : MonoBehaviour
     [SerializeField] GameObject bom2;
     [SerializeField] float ti;
     [SerializeField] float ti2;
+    [SerializeField] float ti3;
     [SerializeField] float stickSpeed = 5.0f; // スティックの速度調整用
     [SerializeField] Text score;
+    static int scoree;
+   
     float time;
     float time2;
     bool isVibrating = false;
@@ -22,6 +25,7 @@ public class Crosshair : MonoBehaviour
 
     void Start()
     {
+        scoree = 0;
         // マウスカーソルを消す
         Cursor.visible = false;
         time = ti;
@@ -63,6 +67,12 @@ public class Crosshair : MonoBehaviour
             newPosition += stickMovement;
         }
 
+        Vector3 viewportPosition = Camera.main.WorldToViewportPoint(newPosition);
+        viewportPosition.x = Mathf.Clamp(viewportPosition.x, 0f, 1f);
+        viewportPosition.y = Mathf.Clamp(viewportPosition.y, 0f, 1f);
+        newPosition = Camera.main.ViewportToWorldPoint(viewportPosition);
+        newPosition.z = 0;
+
         // 位置を更新する
         this.transform.position = newPosition;
         lastMousePosition = Input.mousePosition;
@@ -87,7 +97,10 @@ public class Crosshair : MonoBehaviour
           
         }
   
-
+        if(time2 >= ti3)
+        {
+            click = false;
+        }
         if (isVibrating && time2 >= ti2)
         {
             if (gamepad is DualSenseGamepadHID dualSense)
@@ -95,16 +108,19 @@ public class Crosshair : MonoBehaviour
                 dualSense.SetMotorSpeeds(0f, 0f);
                 isVibrating = false;
             }
-            click = false;
+          
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (click)
         {
+            scoree += 100;
+            score.text = scoree.ToString();
             Destroy(collision.gameObject);
         }
      
     }
+  
 
 }

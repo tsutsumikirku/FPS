@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.Port;
+
 
 public class InsertCoin : MonoBehaviour
 {
     public Text uiText;
     public float duration = 2.0f; // フェードイン・フェードアウトの時間
-    
+
    
 
     void Start()
