@@ -17,6 +17,7 @@ public class Crosshair : MonoBehaviour
     float time2;
     bool isVibrating = false;
     bool useMouse = true; // true: マウス, false: スティック
+    bool click = false;
     Vector3 lastMousePosition;
 
     void Start()
@@ -72,6 +73,7 @@ public class Crosshair : MonoBehaviour
 
         if (Input.GetButton("Fire1") && time > ti)
         {
+            click = true;
             Instantiate(bom);
             Instantiate(bom2, transform.position, Quaternion.identity);
             time = 0;
@@ -82,7 +84,9 @@ public class Crosshair : MonoBehaviour
                 dualSense.SetMotorSpeeds(1f, 1f);
                 isVibrating = true;
             }
+          
         }
+  
 
         if (isVibrating && time2 >= ti2)
         {
@@ -91,15 +95,16 @@ public class Crosshair : MonoBehaviour
                 dualSense.SetMotorSpeeds(0f, 0f);
                 isVibrating = false;
             }
+            click = false;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("反応していまsen");
-        if (Input.GetButton("Fire1") && time > ti)
+        if (click)
         {
             Destroy(collision.gameObject);
-            Debug.Log("反応しています");
         }
+     
     }
+
 }
