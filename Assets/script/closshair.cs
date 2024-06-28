@@ -14,6 +14,7 @@ public class Crosshair : MonoBehaviour
     [SerializeField] float ti3;
     [SerializeField] float stickSpeed = 5.0f; // スティックの速度調整用
     [SerializeField] Text score;
+    [SerializeField] GameObject aA;
     static int scoree;
    
     float time;
@@ -93,6 +94,7 @@ public class Crosshair : MonoBehaviour
             {
                 dualSense.SetMotorSpeeds(1f, 1f);
                 isVibrating = true;
+                Instantiate(aA);
             }
           
         }

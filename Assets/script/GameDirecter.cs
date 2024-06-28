@@ -12,6 +12,7 @@ public class GameDirecter : MonoBehaviour
     [SerializeField] GameObject hp1;
     [SerializeField] GameObject hp2;
     [SerializeField] GameObject hp3;
+    [SerializeField] GameObject damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class GameDirecter : MonoBehaviour
         if(hp == 2)
         {
             Destroy(hp3);
+      
         }
         if(hp == 1)
         {
@@ -38,6 +40,7 @@ public class GameDirecter : MonoBehaviour
     public void Hpc(int s)
     {
         hp = hp - s;
+        Instantiate(damage);
     }
 
    
