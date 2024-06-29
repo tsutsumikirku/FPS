@@ -114,7 +114,7 @@ public class Crosshair : MonoBehaviour
                 dualSense.SetMotorSpeeds(0f, 0f);
                 isVibrating = false;
             }
-          
+
         }
     }
     private void OnTriggerStay2D(Collider2D collision)

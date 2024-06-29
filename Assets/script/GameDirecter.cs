@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.DualShock;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameDirecter : MonoBehaviour
@@ -13,16 +15,20 @@ public class GameDirecter : MonoBehaviour
     [SerializeField] GameObject hp2;
     [SerializeField] GameObject hp3;
     [SerializeField] GameObject damage;
+
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(hp == 2)
+   
+        var gamepad = Gamepad.current;
+        if (hp == 2)
         {
             Destroy(hp3);
       
@@ -34,6 +40,13 @@ public class GameDirecter : MonoBehaviour
         if(hp == 0)
         {
             Destroy (hp1);
+
+            if (gamepad is DualSenseGamepadHID dualSense)
+            {
+                dualSense.SetMotorSpeeds(0f, 0f);
+              
+            }
+
             SceneManager.LoadScene(sceneName);
         }
     }
