@@ -7,6 +7,7 @@ public class gameover : MonoBehaviour
 {
     // Start is called before the first frame update
     Text text;
+   
     void Start()
     {
         int score = PlayerPrefs.GetInt("Score");

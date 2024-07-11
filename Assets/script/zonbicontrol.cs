@@ -28,16 +28,14 @@ public class ZonbiControl : MonoBehaviour
         Vector3 currentScale = transform.localScale;
         currentScale += Vector3.one * scaleSpeed * Time.deltaTime;
         transform.localScale = currentScale;
-
-        
-
         if (currentScale.x >= maxScale.x || currentScale.y >= maxScale.y || currentScale.z >= maxScale.z)
         {
-
             _game.Hpc(sssss);
-            
             Destroy(gameObject);
-       
         }
+    }
+    public void dest()
+    {
+        Destroy(gameObject);
     }
 }

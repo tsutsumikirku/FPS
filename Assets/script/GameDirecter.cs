@@ -26,7 +26,8 @@ public class GameDirecter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   
+
+       
         var gamepad = Gamepad.current;
         if (hp == 2)
         {
@@ -49,11 +50,25 @@ public class GameDirecter : MonoBehaviour
 
             SceneManager.LoadScene(sceneName);
         }
+     
+
+
+
+        if (hp > 3)
+        {
+            hp = 3;
+        }
+
     }
     public void Hpc(int s)
     {
         hp = hp - s;
         Instantiate(damage);
+    }
+
+    public void chengehp(int chengeHp)
+    {
+        hp += chengeHp;
     }
 
    

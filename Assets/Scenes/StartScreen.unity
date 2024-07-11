@@ -192,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Zonbie Panic
+  m_Text: Zombie Panic
 --- !u!222 &205919583
 CanvasRenderer:
   m_ObjectHideFlags: 0
