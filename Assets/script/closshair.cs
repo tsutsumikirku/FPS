@@ -121,11 +121,29 @@ public class Crosshair : MonoBehaviour
     {
         if (click)
         {
-            scoree += 100;
-            score.text = scoree.ToString();
-            Destroy(collision.gameObject);
+           
+           
+            ZonbiControl zonbi = collision.GetComponent<ZonbiControl>();
+            if (zonbi != null)
+            {
+                scoree += 100;
+                score.text = scoree.ToString();
+                Destroy(collision.gameObject);
+            }
+            ItemBase item = collision.GetComponent<ItemBase>();
+            if (item != null)
+            {
+                item.gene();
+                item.newitem();
+
+            }
         }
      
+    }
+    public void itempoint(int a)
+    {
+        scoree += a;
+        score.text = scoree.ToString();
     }
   
 

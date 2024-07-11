@@ -561,9 +561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: gameover
-  hp1: {fileID: 0}
-  hp2: {fileID: 0}
-  hp3: {fileID: 0}
+  hp1: {fileID: 1943072187}
+  hp2: {fileID: 2045360223}
+  hp3: {fileID: 396722834}
   damage: {fileID: 643407733205236810, guid: 24383a0795d425a4faa541edcf7a7a2b, type: 3}
 --- !u!4 &199349648
 Transform:
@@ -655,6 +655,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396722834}
   m_CullTransparentMesh: 1
+--- !u!1 &419856193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419856195}
+  - component: {fileID: 419856194}
+  m_Layer: 0
+  m_Name: itemgene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &419856194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419856193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6e77988019c7546b17d05726d7d60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 5352945987450883559, guid: 3431783f683a47343855e931b1cff330, type: 3}
+  - {fileID: 800961077969268250, guid: a4a89e15461b31a45a8756d7c349431b, type: 3}
+  - {fileID: 2383462712548311476, guid: 46717579397e2bf4ba14be8ea838833e, type: 3}
+  spawnInterval: 8
+  spawnAreaMin: {x: -3.67, y: -3.22}
+  spawnAreaMax: {x: 5.16, y: 8.7}
+--- !u!4 &419856195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419856193}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.705171, y: 3.7696295, z: -0.095133744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611964477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 77.49661, y: -49.13008}
+  m_AnchoredPosition: {x: 77.49661, y: -49.130127}
   m_SizeDelta: {x: 142.9763, y: 30}
   m_Pivot: {x: 0.5, y: 0.49999923}
 --- !u!114 &1275631899
@@ -1545,3 +1596,4 @@ SceneRoots:
   - {fileID: 83508463}
   - {fileID: 168578541}
   - {fileID: 199349648}
+  - {fileID: 419856195}

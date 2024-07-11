@@ -7,23 +7,34 @@ public class ItemBase : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] int HealHp;
     [SerializeField] int PowerupHealHp;
+    [SerializeField] float deletetime;
+    float time;
     GameObject gameDirecter;
     GameDirecter game;
+    GameObject closs;
+   public Crosshair clossha;
     public void Start()
     {
-        gameDirecter = GameObject.Find("GameDirecter");
+        gameDirecter = GameObject.Find("GameDirector");
         game = gameDirecter.GetComponent<GameDirecter>();
-        heal();
-        powerup();
-        Destroy(gameObject);
+        closs = GameObject.Find("crosshair");
+        clossha = closs.GetComponent<Crosshair>();
+
+        
     }
-    public virtual void heal()
+    public void gene()
     {
         game.chengehp(HealHp);
-    }
-    public virtual void powerup()
-    {
         game.chengehp(PowerupHealHp);
+        Destroy(gameObject);
+    }
+    public void Update()
+    {
+        time += Time.deltaTime;
+        if(time > deletetime)
+        {
+            Destroy(gameObject);
+        }
     }
     public virtual void newitem()
     {

@@ -31,16 +31,16 @@ public class GameDirecter : MonoBehaviour
         var gamepad = Gamepad.current;
         if (hp == 2)
         {
-            Destroy(hp3);
-      
+            hp3.SetActive(false);
+
         }
         if(hp == 1)
         {
-            Destroy (hp2);
+            hp2.SetActive(false);
         }
         if(hp == 0)
         {
-            Destroy (hp1);
+            hp1.SetActive(false);
 
             if (gamepad is DualSenseGamepadHID dualSense)
             {
@@ -50,7 +50,16 @@ public class GameDirecter : MonoBehaviour
 
             SceneManager.LoadScene(sceneName);
         }
-     
+        if(hp == 3)
+        {
+            hp3.SetActive(true);
+            hp2.SetActive(true);
+        }
+        if(hp == 2)
+        {
+            hp2.SetActive(true);
+        }
+
 
 
 
